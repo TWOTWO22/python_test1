@@ -97,6 +97,7 @@ print("批量取出a元组中的布尔值方法二：",a[12:])
 print("批量取出a元组中的所有值：",a[:])"""
 
 #  8. 数组
+"""
 # 元组和数组的区别：元组写好之后不能修改（写死的），数组可以写好之后可以修改
 a=[1,2,3,4,5,6,7,8,9,"哈哈","哈哈","嘻嘻",True,False]
 print("只取出a数组中的嘻嘻：",a[11])
@@ -115,3 +116,54 @@ e=a.pop(0) #剪切出数字1
 f=a.pop(0) #剪切出数字2
 print("输出剪切出的e和f相加之和：",e+f)
 print(a)
+# a.clear() #清空a中的值，使其变成一个空数组
+# print("输出清空a数组：",a)
+g=[10,11,"嘿嘿"] 
+a.extend(g) #往数组中加一个
+print("往a数组中加一个g数组方法一",a) #和append去区别：extend可以插入一个数组，而append只能插入一个值
+print("往a数组中插入一个g数组方法二：",a+g)  #数组可以直接相加
+a.remove(4) #移走a中的数字4  和pop的区别：pop可以赋值，而remove不能赋值，只是对a进行操作
+print("移除a中的数字4：",a)
+h=[True,1,False,0] #一般会将true识别成1，false识别为0
+print("查看true，1，false，0中有几个1：",h.count(1))
+# tips：
+# a.无论是元组还是数组，输入下标都不能越界，否则代码会报错
+# b.所有的方法都是以()的方式，eg：print(),input()
+# c.元组，数组，字典的取值，都是用中括号[] eg:a[0]
+# d.元组，数组，字典的定义分别是(),[],{} 
+"""
+
+#8.字典
+"""
+# 字典的特点
+# a. 字典中的值是没有顺序的
+# b. 字典中的结构必须是 键值对的结构  key：value
+# d. 字典中的取值都是通过可以去取value的值
+# e. 所有的字符串都必须加引号
+a={"name":"张三",0:"哈哈","age":18}
+print("向a字典中取姓名这个值:",a["name"]) #取值
+a["high"]="180cm" #新增值 字典中不存在的
+print("向a字典新增一个high键值对：",a) 
+a["name"]="李四" #修改值 字典中存在的
+print("修改字典a中的name的值：",a)
+b=a.get("name") #get方法取值
+print("用get方法在字典a中取出name的值：",b)
+# print(a.get("name1"))
+# print(a["name1"])  #get方法取值和直接取值区别：当key不存在时，get返回的none而直接取值直接报错
+c=a.pop("name") #剪切值
+print("用pop向字典a中取出name这个键值对：",c)
+print("取出name之后的字典a：",a)
+a.update(weight="45kg") #更新 可以修改也可以增加 weight在这里相当于变量，不加引号
+print("用update向字典中增加一个weight值：",a)
+a.update(weight="40kg")
+print("用update向字典中修改weight值：",a)
+# 数组和字典的删除
+del a[0] #字典的删除
+print("删除a字典中的0键对值：",a)
+d=[1,2,3,4,5]
+del d[0] #数组的删除
+print("删除d数组中小标为o的值：",d)
+"""
+
+#练习三
+print("练习三：获取用户输入的个人信息，并且储存到字典中，个人信息包括了，name、age、sex")
