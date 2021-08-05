@@ -166,7 +166,7 @@ print("删除d数组中小标为o的值：",d)
 """
 
 #练习三
-print("练习三：获取用户输入的个人信息，并且储存到字典中，个人信息包括了，name、age、sex")
+# print("练习三：获取用户输入的个人信息，并且储存到字典中，个人信息包括了，name、age、sex")
 a={}
 b=input("请输入用户的name值：")
 c=input("请输入用户的age值：")
@@ -175,3 +175,7 @@ a["name"]=b #用直接取值的方法添加
 a.update(age=float(c))
 a.update(sex=d)
 print("获取name，age，sex之后打印a字典：",a)
+# # a.update(name=b,age=c,sex=d)  #update可以同时
+# # print(a)
+# # a={"name":b,"age":c,"sex":d}
+# # print(a)
