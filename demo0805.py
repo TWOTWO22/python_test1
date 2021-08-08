@@ -28,14 +28,29 @@
 # a="您好，啊啊啊啊"
 # if "您好" in a:
 #     print("正确")
-b=input("请输入b的值:")
-if b=="":
-    print("输入的值不能为空")
-    exit()
-if b in "123456789":
-    b=int(b)
-else:
-    print("请输入正确的数值")
-    exit()  #如果满足继续执行
-if b>5:
-    print("b的值大于5")
+# b=input("请输入b的值:")
+# if b=="":
+#     print("输入的值不能为空")
+#     exit()
+# if b in "123456789":
+#     b=int(b)
+# else:
+#     print("请输入正确的数值")
+#     exit()  #如果满足继续执行
+# if b>5:
+#     print("b的值大于5")
+# is的用法
+# a=input("请输入a的值：")
+# if type(a) is int:
+#     print("a的类型是数值")
+# elif type(a) is str:
+#     print("a的类型的字符串")
+# else:
+#     print("a的类型是其他")
+
+# 2. 循环
+# while循环
+a=1
+while a<3:
+    print("a第",a,"次循环")
+    a=a+1
