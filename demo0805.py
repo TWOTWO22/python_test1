@@ -118,13 +118,14 @@
 # i=2 j=1 j=2
 # 2*1=2 2*2=4
 
- #end()和print()的作用
+#end()和print()的作用
 # a=["张三","李四"]
 # for i in a:
 #      print(i,end="||")   #print里面的参数end是使它不换行
 #      print("-----")      #print里面的作用就是让他换行
 
 #练习三 通过print打印，模拟一个红绿灯，注意：红灯30次，绿灯35次，黄灯3次
+#方法一
 # a=0
 # while a==0:
 #     for i in range(30,0,-1):
@@ -133,19 +134,50 @@
 #         print("绿灯还有",j,"秒结束")
 #     for k in range(3,0,-1):
 #         print("黄灯还有",k,"秒结束")
+#方法二 
+# light={"红灯":30,"绿灯":36,"黄灯":3} #定义一个字典 可维护性很很高
+# while True: #死循环和while 1 一样
+#     for i in light:  #for循环中i取值取得是key值
+#         for j in range(light[i]):
+#             print(i,"倒计时结束还有",light[i]-j,"秒")
 
 
 #练习四 
 # 使用代码，实现一个注册功能 用户输入账户和密码，要求账号长度是5-8位，密码6-12位，并且账号必须小写开头
 # 并且储蓄到字典中
-a={}
-username=input("请输入用户名：")
-password=input("请输入用户名密码：")
-if len(username)>=5 and len(username)<=8 and len(password)>=6 and len(password)<=12:
-    print("用户名输入正确")
-    a[username]=password
-    print(a)
-else:
-    print("用户名或密码输入错误，请重新输入")
+# 方法一
+# a={}
+# username=input("请输入用户名：")
+# password=input("请输入用户名密码：")
+# if len(username)>=5 and len(username)<=8 and len(password)>=6 and len(password)<=12 and username[0] in "qwertyuioplkjhgfdsazxcvbnm":
+#     print("用户名输入正确")
+#     a[username]=password
+#     print(a)
+# else:
+#     print("用户名或密码输入错误，请重新输入")
+#方法二
+# username=input("请输入用户名：")
+# password=input("请输入用户名密码：")
+# if len(username)>=5 and len(username)<=8:
+#     if username[0] in "qwertyuioplkjhgfdsazxcvbnm":
+#         if len(password)>=6 and len(password)<=12:
+#             print("注册成功",{username:password})
+#         else:
+#             print("用户密码长度必须是6-12位")
+#     else:
+#         print("用户名的首字母必须小写")
+# else:
+#     print("用户名长度必须是5-8位")
+
+# continue和break的作用
+# for i in range(10):
+#     if i==5:
+#         continue  #跳出当前循环 继续执行下一循环
+#     print(i)
+# for i in range(10):
+#     if i==5:
+#         break  #终止当前循环，不在执行
+#     print(i)
+# tips：continue和break 都只在当层循环中起作用
 
 
