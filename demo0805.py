@@ -91,13 +91,16 @@
 # for i in a:
 #     print(i)  #把i作为遍历对象，挨着遍历字符串里面的值
 # b=["张三","李四","王五"]
+
 # for i in b:
 #     print(i)  #把i作为遍历对象，挨着遍历数组
+
 # range（）方法的使用
 # a=list(range(0,10)) # 自动生成一个数列
 # print(a)
 # b=list(range(0,10,2))
 # print(b)
+
 # for i in range(10):    #range（10） 默认是1,10的数字，左闭右开
 #     print(i)
 # for i in range(0,10):  #list(range(0,10))是0到10的数组

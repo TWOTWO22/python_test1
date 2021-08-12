@@ -31,3 +31,20 @@
 # a=[1,2,3,4]
 # b=a.index(1)
 # print(a[b])
+
+# 2. 异常捕获
+# try:  except: 异常捕获 联动
+# try:
+#     print("a"+1)
+# except:
+#     print("代码错误！")
+
+# a=input("请输入姓名：")
+# b=input("请输入年龄：")
+# try:
+#     if int(b)>18:
+#         print(a,"成年了")
+#     else:
+#         print(a,"未成年")
+# except Exception  as e:  #exception 是异常类
+#     print("您输入的年龄错误：",e)
